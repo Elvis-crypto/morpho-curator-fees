@@ -1,0 +1,6 @@
+dbt-duckdb
+web3
+pandas
+matplotlib
+tabulate
+requests

@@ -1,0 +1,13 @@
+name: morpho_curators
+version: "0.1.0"
+profile: morpho_curators
+seed-paths: ["seeds"]
+models:
+  morpho_curators:
+    raw: {+materialized: view}
+    decoded: {+materialized: view}
+    normalised: {+materialized: table}
+    metrics: {+materialized: table}
+seeds:
+  morpho_curators:
+    +column_types: {arg0: varchar, arg1: varchar, total_assets: varchar, total_supply: varchar, last_total_assets: varchar, fee_wad: varchar, day: date}

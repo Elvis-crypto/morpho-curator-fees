@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Morpho curator vault fees</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div><h1>Morpho curator vault fees</h1>
+<p class="sub">Daily fees, supply-side fees and revenue (USD) for 3 MetaMorpho V1 vaults on Ethereum · <a href="METHODOLOGY.md">Methodology</a></p></div></header>
+<main>
+<section class="kpis" id="kpis"></section>
+<section class="card"><div class="row"><h2>Daily fees by curator</h2>
+<select id="metric"><option value="fees_usd">Fees</option><option value="revenue_usd">Revenue</option><option value="fees_supply_side_usd">Supply-side fees</option></select></div>
+<canvas id="curatorChart" height="110"></canvas></section>
+<section class="card"><h2>Daily fees by vault (stacked: revenue + supply-side)</h2><canvas id="vaultChart" height="110"></canvas></section>
+<section class="card"><h2>Totals</h2><table id="totals"></table></section>
+<section class="card"><h2>Reconciliation, <span id="rday"></span></h2>
+<p class="sub">Event ledger vs on-chain <code>lastTotalAssets()</code> at the day's last block (independent RPC check).</p>
+<table id="recon"></table><details><summary>Transaction-level events</summary><table id="ledger"></table></details></section>
+</main>
+<footer>Data: public Ethereum RPC (events, archive eth_call), DefiLlama prices. Interest is recognised at on-chain accrual events. <a href="METHODOLOGY.md">Methodology</a></footer>
+<script src="app.js"></script></body></html>

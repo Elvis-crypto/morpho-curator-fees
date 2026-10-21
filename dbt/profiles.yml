@@ -1,0 +1,4 @@
+morpho_curators:
+  target: dev
+  outputs:
+    dev: {type: duckdb, path: "morpho.duckdb", threads: 4}

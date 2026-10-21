@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: vault_interest_accruals
+    columns:
+      - name: interest_assets
+        tests: [not_null]
+  - name: vault_fees_daily
+    columns:
+      - name: price_usd
+        tests: [not_null]
