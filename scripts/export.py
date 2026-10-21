@@ -26,6 +26,8 @@ with open(f"reports/reconciliation_{RECON_DAY}.md","w") as f:
     f.write(f"# Transaction-level reconciliation — {RECON_DAY} (UTC)\n\nEnd-of-day ledger vs on-chain `lastTotalAssets()` (archive eth_call):\n\n")
     f.write(snap.to_markdown(index=False)+"\n\nEvents (asset units):\n\n"+led.to_markdown(index=False)+"\n")
 shutil.copy("METHODOLOGY.md","dashboard/METHODOLOGY.md")
+import os
+if os.path.exists("reports/dune_crosscheck.md"): shutil.copy("reports/dune_crosscheck.md","dashboard/crosscheck.md")
 fig,ax=plt.subplots(figsize=(11,5))
 for n,g in cur.groupby("curator_name"):
     d=pd.to_datetime(g.day); ax.plot(d,g.fees_usd,label=f"{n} fees"); ax.plot(d,g.revenue_usd,"--",label=f"{n} revenue")

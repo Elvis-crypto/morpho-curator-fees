@@ -13,6 +13,8 @@
 <canvas id="curatorChart" height="110"></canvas></section>
 <section class="card"><h2>Daily fees by vault (stacked: revenue + supply-side)</h2><canvas id="vaultChart" height="110"></canvas></section>
 <section class="card"><h2>Totals</h2><table id="totals"></table></section>
+<section class="card"><h2>Independent cross-check vs Morpho's Dune query</h2>
+<p class="sub">Steakhouse USDC curator revenue vs Morpho's public <a href="https://dune.com/queries/5930091">Dune query 5930091</a> (cached results): <b>−0.025% over 85 days</b>; largest daily deviation 0.05%. <a href="crosscheck.md">Details</a></p></section>
 <section class="card"><h2>Reconciliation, <span id="rday"></span></h2>
 <p class="sub">Event ledger vs on-chain <code>lastTotalAssets()</code> at the day's last block (independent RPC check).</p>
 <table id="recon"></table><details><summary>Transaction-level events</summary><table id="ledger"></table></details></section>
