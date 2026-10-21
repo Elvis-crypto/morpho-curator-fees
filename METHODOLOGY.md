@@ -35,3 +35,4 @@ A MetaMorpho vault stores `lastTotalAssets`. Each interaction first emits `Accru
 - **Token incentives** (MORPHO, URD/Merkl rewards) are excluded, so earnings are not computed.
 - The curator's fee shares are valued at the asset amount when they are created. Later changes in share price are not attributed.
 - Unmodelled vault events, such as `ReallocateSupply`/`ReallocateWithdraw` (topic `0xdd8bf522…` = `ReallocateWithdraw(address,bytes32,uint256,uint256)`), move assets between markets and do not change `totalAssets`.
+- **External cross-check:** our curator revenue for Steakhouse USDC matches Morpho's own public Dune query 5930091 to −0.025% over 85 days (`reports/dune_crosscheck.md`).

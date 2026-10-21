@@ -27,3 +27,6 @@ Outputs: `morpho.duckdb`, `reports/curator_fees_daily.png`, `reports/reconciliat
 ## Dashboard
 A static site in `dashboard/` (plain HTML + Chart.js from a CDN, no build step, no secrets). Local: `cd dashboard && python3 -m http.server`.
 Vercel: `vercel.json` sets `outputDirectory: dashboard` with no build step (or set Root Directory = `dashboard`, Framework = Other).
+
+## Independent cross-check (optional)
+`scripts/dune_crosscheck.py [--fetch]` compares our curator revenue with Morpho's public Dune query [5930091](https://dune.com/queries/5930091). It reads only that query's latest cached results; nothing is executed. The cache covers only Steakhouse USDC. Over 85 full days the totals differ by −0.025% and the largest daily deviation is 0.05% ([report](reports/dune_crosscheck.md)). The dbt test `assert_crosscheck_dune_morpho_q5930091` fails if any day differs by more than 0.5%.

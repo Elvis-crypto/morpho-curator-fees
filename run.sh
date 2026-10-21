@@ -5,3 +5,4 @@ END_DAY=${1:-$(date -u -d yesterday +%F)}; N_DAYS=${2:-90}; RECON_DAY=${3:-$END_
 .venv/bin/python -u scripts/backfill_rpc.py "$END_DAY" "$N_DAYS"
 .venv/bin/dbt build --full-refresh --project-dir dbt --profiles-dir dbt
 .venv/bin/python scripts/export.py "$RECON_DAY"
+[ -f data/dune/q5930091_steakhouse_usdc.csv ] && .venv/bin/python scripts/dune_crosscheck.py || true
