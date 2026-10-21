@@ -1,5 +1,7 @@
 # Morpho curator vault fees
 
+**Live dashboard:** https://morpho-curator-fees.vercel.app
+
 Daily **fees, supply-side fees and revenue (USD)** for three MetaMorpho V1 curator vaults on Ethereum (Steakhouse USDC, Steakhouse ETH, Gauntlet USDC Prime). Metric definitions follow Token Terminal's: fees = revenue + supply-side fees. See [METHODOLOGY.md](METHODOLOGY.md).
 
 ![chart](reports/curator_fees_daily.png)

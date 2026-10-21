@@ -14,3 +14,5 @@ pip.log
 data/*.log
 .user.yml
 research.md
+.vercel/
+.vercel
