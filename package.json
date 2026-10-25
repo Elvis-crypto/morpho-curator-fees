@@ -1,0 +1,9 @@
+{
+  "name": "morpho-curator-fees",
+  "version": "1.0.0",
+  "description": "Daily fees, supply-side fees and revenue (USD) for MetaMorpho V1 curator vaults on Ethereum",
+  "type": "module",
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}
