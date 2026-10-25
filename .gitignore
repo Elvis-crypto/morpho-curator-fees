@@ -17,3 +17,4 @@ research.md
 .vercel/
 .vercel
 data/dune/*.sql
+node_modules/
